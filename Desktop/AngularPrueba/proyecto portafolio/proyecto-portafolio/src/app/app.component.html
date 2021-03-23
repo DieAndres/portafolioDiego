@@ -1,0 +1,47 @@
+<header class='centrado header-menu'>
+
+    <a [routerLink]="['/about']"><img class='logo-img' src="../assets/img/logo.png" alt=""></a>
+
+
+
+    <ul class='ul-header'>
+        
+        
+        <li ><a class='linkGreen' [routerLink]="['/contact']">Contacto</a></li>
+        <li><a [routerLink]="['/projects']">Proyectos</a></li>
+        <li><a [routerLink]="['/create']">Crear Proyecto</a></li>
+    </ul>
+
+    <button class='button-MenuResponsive'>
+        <svg  xmlns="http://www.w3.org/2000/svg" height="5rem" viewBox="0 0 24 24" width="5rem"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+    </button>
+
+</header>
+
+<section class='cont-router'>
+    <router-outlet></router-outlet>
+</section>
+
+<footer >
+        <div class="projectos">
+                <h4 class='h4stl'>Mi lista de proyectos</h4>
+                <button [routerLink]="['/projects']" class='linkGreen' style="color:white">Proyectos</button>
+            </div>
+            
+        <div class="footer-stl">
+                
+                <a>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" d="m12 .5c-6.63 0-12 5.28-12 11.792 0 5.211 3.438 9.63 8.205 11.188.6.111.82-.254.82-.567 0-.28-.01-1.022-.015-2.005-3.338.711-4.042-1.582-4.042-1.582-.546-1.361-1.335-1.725-1.335-1.725-1.087-.731.084-.716.084-.716 1.205.082 1.838 1.215 1.838 1.215 1.07 1.803 2.809 1.282 3.495.981.108-.763.417-1.282.76-1.577-2.665-.295-5.466-1.309-5.466-5.827 0-1.287.465-2.339 1.235-3.164-.135-.298-.54-1.497.105-3.121 0 0 1.005-.316 3.3 1.209.96-.262 1.98-.392 3-.398 1.02.006 2.04.136 3 .398 2.28-1.525 3.285-1.209 3.285-1.209.645 1.624.24 2.823.12 3.121.765.825 1.23 1.877 1.23 3.164 0 4.53-2.805 5.527-5.475 5.817.42.354.81 1.077.81 2.182 0 1.578-.015 2.846-.015 3.229 0 .309.21.678.825.56 4.801-1.548 8.236-5.97 8.236-11.173 0-6.512-5.373-11.792-12-11.792z" fill="#ffffff" data-original="#000000" style="" class=""/></g></svg>                        
+                </a>   
+                <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 216 216" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g>
+                                <path xmlns="http://www.w3.org/2000/svg" d="M108,0C48.353,0,0,48.353,0,108s48.353,108,108,108s108-48.353,108-108S167.647,0,108,0z M156.657,60L107.96,98.498  L57.679,60H156.657z M161.667,156h-109V76.259l50.244,38.11c1.347,1.03,3.34,1.545,4.947,1.545c1.645,0,3.073-0.54,4.435-1.616  l49.374-39.276V156z" fill="#ffffff" data-original="#000000" style="" class=""/>
+                                <g xmlns="http://www.w3.org/2000/svg">
+                                </g></g></svg>
+                </a>
+                        
+        </div>
+ <div class="pfooter">
+  <p >Handcrafted by @diegokoci - © 2021</p>
+</div>
+</footer>

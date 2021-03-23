@@ -1,0 +1,62 @@
+<div style="text-align: center">
+        <h2>{{title}}</h2>
+</div>
+<div class="success" *ngIf="status =='edit'">
+                <p>El proyecto se ha editado correctamente{{status}}</p>
+        </div>
+<form action="" #projectForm='ngForm' (ngSubmit)="onSubmit(projectForm)" class="form-create" *ngIf="project">
+    <p class=p-form>
+        <label for="name">Nombre:</label>
+        <input type="text" name="name" #name="ngModel" [(ngModel)]="project.name"  required>
+        <span class='error_form' *ngIf="name.touched && !name.valid">
+           El nombre es obligatorio     
+        </span>
+    </p>
+    <p class=p-form>
+            <label for="year">Año:</label>
+            <input type="number" name="year" #year="ngModel" [(ngModel)]="project.year" required >
+            <span class='error_form' *ngIf="year.touched && !year.valid">
+                        El año es obligatorio     
+                     </span>
+    </p>
+    <p class=p-form>
+            <label for="langs">Lenguajes:</label>
+            <input type="text" name="langs" #langs="ngModel" [(ngModel)]="project.langs" required >
+            <span class='error_form' *ngIf="langs.touched && !langs.valid">
+                        El lenguaje es obligatorio     
+                     </span>
+    </p>
+    <p class=p-form>
+            <label for="link">Github Link:</label>
+            <input type="text" name="link" #link="ngModel" [(ngModel)]="project.link" required>
+            <span class='error_form' *ngIf="link.touched && !link.valid">
+                        El link es obligatorio     
+                     </span>
+    </p>
+    <div class='' *ngIf="project.image">
+                <p>Imagen actual:</p>
+                <img src="{{url+'get-image/'+project.image}}" alt="" style="width: 15rem">
+           
+                <p class=p-form>
+                                
+                        <label for="image">Imagen:</label>
+                        <input class='in-img' type="file" name="image" (change)="changefile($event)">
+                </p>
+        </div>
+    <p class=p-form>
+            <label for="description">Descripción:</label>
+            <textarea  name='description' #description="ngModel" [(ngModel)]="project.description" required ></textarea>
+            <span class='error_form' *ngIf="description.touched && !description.valid">
+                        La descripción es obligatoria
+                     </span>
+    </p>
+    
+<div class="success" *ngIf="status =='success'">
+                <p>El proyecto se ha creado correctamente</p>
+        </div>
+        
+    <div class="div-btn" >
+      <input type="submit" value="Enviar" class='btn-subm linkGreen'  [disabled]='!projectForm.form.valid'>
+    </div>   
+
+</form>
